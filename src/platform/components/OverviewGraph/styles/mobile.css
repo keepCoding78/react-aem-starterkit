@@ -1,0 +1,18 @@
+@media (--mobile) {
+  .graphBar {
+    height: 36px;
+  }
+
+  .overview-graph {
+    margin-top: 7px;
+  }
+  
+  [tooltip]::before {
+    display: none;
+  }
+
+  [tooltip]::after {
+    display: none;
+  }
+
+}

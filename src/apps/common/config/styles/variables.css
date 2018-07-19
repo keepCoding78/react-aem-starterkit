@@ -1,0 +1,13 @@
+/*
+ *   Media Queries
+ */
+
+@custom-media --mobile (max-width: 480px);
+@custom-media --mobile-landscape (min-width: 481px);
+
+/* @custom-media --tablet ( min-width: 768px);
+@custom-media --tablet-landscape ( min-width: 981px);
+@custom-media --desktop ( min-width: 1025px); */
+
+@custom-media --desktop ( min-width: 768px);
+@custom-media --desktop-xl ( min-width: 1281px);

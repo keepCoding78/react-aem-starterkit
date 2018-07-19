@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Testing - Products</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        #root {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .wrapper {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+    <div class="site-wrapper">
+        <div class="body-wrapper">
+            <header class="body-wrapper--left">
+                <div class="nav-toggle visible-mobile">
+                    <span class="hamburger-icon" onclick="this.parentElement.parentElement.querySelector('.mobile-nav-group').classList.toggle('active')"></span>
+                </div>
+
+                <div class="logo">
+                    <a>
+                        <img src="/logo.svg" alt="Logo">
+                    </a>
+                </div>
+
+                <div class="notification-toggle visible-mobile">
+                    <span class="notification-icon"></span>
+                </div>
+
+                <div class="mobile-nav-group">
+                    <div class="leftNav">
+                        <nav>
+                            <div class="mobile-nav-close" onclick="this.parentElement.parentElement.parentElement.parentElement.querySelector('.mobile-nav-group').classList.toggle('active')"></div>
+                            <ul class="nav-items">
+                                <li class="nav-item">
+                                    <a href="/dashboard">Dashboard</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="/products">Products</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="help-wrapper">
+                            <div class="help">
+                                <a href="#">Support</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="body-wrapper--main">
+                <!-- REMOVING FOR NOW BREAKS VIEWS ADD AGAIN WHEN IMPLEMENTED CORRECTLY
+      <div class="component-wrapper">
+        <div class="greeting">Welcome back, Camila</div>
+      </div>
+      -->
+
+                <div id="appshell" class="app-wrapper">
+                    <div data-componentid="app" data-component="app" data-config="app-config" data-render="true"></div>
+                    <script type="application/json" id="app-config">
+                        {
+                            "data": {
+                                "componentId": "App",
+                                "componentType": "nested",
+                                "routes": {
+                                    "/products": [{
+                                        "component": "PLP",
+                                        "configId": "PLP-config"
+                                    }],
+                                    "/products/:Id": [{
+                                        "component": "productdetails",
+                                        "configId": "Productdetail-config"
+                                    }]
+                                }
+                            }
+                        }
+                    </script>
+                    <script type="application/json" id="PLP-config">
+                        {
+                          "data": {
+                            "componentId": "PLP",
+                            "labels": {
+                              "contractFilter": {
+                                "filterHint": "Filter by Commodity or Contract Number",
+                                "dashboardText": "Search for a Contract",
+                                "contractType": {
+                                  "label": "All Contracts",
+                                  "options" : [
+                                    {
+                                      "label": "All Types",
+                                      "value": "all"
+                                    },
+              
+                                    {
+                                      "label": "Service Contracts",
+                                      "value": "Service"
+                                    },
+                                    {
+                                      "label": "Sales Contracts",
+                                      "value": "Sales"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      </script>
+                   
+                </div>
+                <div class="footer-wrapper">
+                    <footer>
+                        <ul class="footer-link-group">
+                            <li>
+                                <a href="/sitemap">Footer Information</a>
+                            </li>
+                            <li>
+                                <a href="/sitemap">Sitemap</a>
+                            </li>
+                            <li>
+                                <a href="/contact-us">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="/contact-us">Terms & Conditions </a>
+                            </li>
+                            <li>
+                                <a href="/contact-us">Copyright Information</a>
+                            </li>
+                        </ul>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <div id="modalshell" class="modal-wrapper"></div>
+    </div>
+
+    <script type="text/javascript">
+        window.__INITIAL_STATE__ = {
+            "notifications": [{
+                "label": "Notification 1: Your contract payment is pending"
+            }, {
+                "label": "Notification 2: Your contract is pending"
+            }, {
+                "label": "Notification 3: Your contract is pending"
+            }]
+        };
+        window.__APP_CONFIG__ = {
+            "baseUrlApp": "",
+            "lang": "en"
+        };
+    </script>
+</body>
+
+</html>

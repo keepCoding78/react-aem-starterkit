@@ -1,0 +1,5 @@
+/*
+ * action types
+ */
+export const ADD_NOTIFICATION = 'ADD_NOTIFICATION';
+export const CLEAR_ALL_NOTIFICATION = 'CLEAR_ALL_NOTIFICATION';

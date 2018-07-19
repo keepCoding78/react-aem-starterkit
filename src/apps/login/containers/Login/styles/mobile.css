@@ -1,0 +1,7 @@
+@media (--mobile) {
+  #okta-sign-in {
+    &.auth-container{
+      margin-top: 75px;
+    }
+  }
+}

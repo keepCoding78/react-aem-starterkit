@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+      <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <!--
+        Notice the use of %PUBLIC_URL% in the tags above.
+        It will be replaced with the URL of the `public` folder during the build.
+        Only files inside the `public` folder can be referenced from the HTML.
+
+        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+        work correctly both with client-side routing and a non-root public URL.
+        Learn how to configure a non-root public URL by running `npm run build`.
+      -->
+  <title>Testing - Login</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div class="site-wrapper">
+    <div class="body-wrapper">
+      <div class="body-wrapper--main">
+        <div id="appshell" class="app-wrapper">
+          <div class="component-wrapper">
+
+            <span data-componentid="OktaLogin" data-component="OktaLogin" data-config="OktaLogin-config"></span>
+            <script type="application/json" id="OktaLogin-config">
+              {
+                "data": {
+                  "componentId": "OktaLogin",
+                  "componentType": "single",
+                  "logo" : "/images/testing-logo-black.svg",
+                  "i18n": {
+                    "en": {
+                      "primaryauth.submit": "Log In",
+                      "needhelp": "Need help signing in?",
+                      "forgotpassword": "Forgot password?",
+                      "help": "Help",
+                      "retry": "Retry",
+                      "remember" : "Remember me",
+                      "goback" : "Back to Sign In",
+                      "primaryauth.submit": "Log In",
+                      "primaryauth.username.placeholder": "Username",
+                      "primaryauth.password.placeholder": "Password",
+                      "error.username.required" : "Please enter a username",
+                      "error.password.required" : "Please enter a password",
+                      "errors.E0000004": "Sign in failed!",
+                      "oform.errorbanner.title" : "We found some errors. Please review the form and make corrections.",
+                      "oform.errormsg.title" : "Please review the form to correct the following errors:",
+                      "oform.error.unexpected" : "There was an unexpected internal error. Please try again.",
+                      "password.forgot.email.or.username.placeholder" : "Email or Username",
+                      "password.forgot.email.or.username.tooltip" : "Email or Username",
+                      "password.forgot.sendText" : "Reset via SMS",
+                      "password.forgot.sendEmail" : "Reset via Email",
+                      "password.forgot.call" : "Reset via Voice Call",
+                      "password.forgot.emailSent.title" : "Email sent!",
+                      "password.forgot.emailSent.desc" : "Email has been sent to {0} with instructions on resetting your password.",
+                      "password.forgot.question.title" : "Answer Forgotten Password Challenge",
+                      "password.forgot.question.submit" : "Reset Password",
+                      "password.forgot.code.notReceived" : "Didn't receive a code? Reset via email",
+                      "password.forgot.noFactorsEnabled" : "No password reset options available. Please contact your administrator.",
+                      "model.validation.field.blank" : "The field cannot be left blank"
+                    }
+                  }                
+                }
+              }
+            </script>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.__INITIAL_STATE__ = {};
+    window.__APP_CONFIG__ = {
+      "lang": "en"
+    };
+  </script>
+
+</body>
+
+</html>

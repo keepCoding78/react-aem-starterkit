@@ -1,0 +1,85 @@
+.body-wrapper--main {
+  width: 100%;
+}
+
+body {
+  background-image: url('/images/login-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center fixed;
+  background-size: cover;
+}
+
+#okta-sign-in {
+  font-family: var(--font-baseline);
+  background-color: var(--white);
+  border-color: var(--white);
+  border-radius: 0;
+  box-shadow: rgba(#000, $drop-shadow-opacity) 0 1px 0, rgba(255, 255, 255, 0.1) 0 1px 0 0 inset;
+
+  & .input-tooltip {
+    display: none;
+  }
+
+  & .help {
+
+    color: var(--grey-60);
+
+    &:any-link {
+      color: var(--grey-60);
+    }
+  }
+
+
+  & .help {
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+  }
+
+
+  & .o-form {
+
+    & .input-fix {
+      border-radius: 0;
+    }
+  }
+
+  &.no-beacon {
+  
+    & .auth-header {
+      padding-bottom: 24px;
+      border-bottom: 0;
+      padding-top: 52px;
+    } 
+
+    & .auth-content {
+        padding-bottom: 48px;
+    } 
+  }
+
+  & .auth-org-logo {
+    max-height: 60px;
+  }
+
+  &.auth-container {
+
+    &.main-container {
+      /* -- Fonts and Text Colors -- */
+      font-family: var(--font-baseline);
+    }
+
+    & .button {
+
+      color: var(--white);
+      border-color: var(--green-vibrant);
+      background-color: var(--green-vibrant);
+      border-radius: 0;
+      filter: none;
+    }
+  }
+
+  & .okta-form-title {
+    display: none;
+  }
+}
