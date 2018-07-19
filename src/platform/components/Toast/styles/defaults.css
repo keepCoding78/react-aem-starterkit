@@ -1,0 +1,21 @@
+.toast-container {
+  position: fixed;
+  width: 100%;
+  background: transparent;
+  bottom: -10rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding: 0 10%;
+  left: 0;
+
+  &.open {
+    bottom: 1rem;
+  }
+
+}

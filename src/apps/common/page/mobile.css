@@ -1,0 +1,42 @@
+@media (--mobile) {
+  .body-wrapper--left {
+    display: flex;
+    flex-direction: row;
+
+    & .help-wrapper {
+      align-self: flex-start;
+    }
+  }
+
+  .mobile-header {
+    color: var(--white);
+    background-color: var(--grey-90); 
+    & .mobile-menu-btn {
+      font-size: 28px;
+      display: inline-block;
+      padding: 20px;
+    }
+    & .mobile-logo {
+      display: inline-block;
+      width: 70%;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  .component-wrapper {
+    lost-column: 1/1;
+    padding: 0;
+    & .greeting {
+      font-size: 40px;
+      padding: 50px 20px 20px;
+      line-height: initial;
+    }
+  }
+  .footer-wrapper {
+    display: none;
+  }
+  .button--modal {
+    width:100%;
+  }
+}
+

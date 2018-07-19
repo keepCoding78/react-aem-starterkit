@@ -1,0 +1,58 @@
+/* test only... should define component-specific styles within each component folder */
+
+/* :root {
+  --headerColor: {
+    color: #006a3c;
+  }
+} */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+header {
+  lost-utility: clearfix;
+}
+
+header ul li {
+  display: inline-block;
+  lost-column: 1/1;
+}
+
+/* test style */
+.add-customer {
+  position: relative;
+  margin-top: 50px;
+}
+
+/* end test style */
+
+.body-wrapper--left {
+  display: flex;
+  flex-direction: column;
+
+  & .nav-items {
+    & .nav-item {
+      display: flex;
+    }
+  }
+
+  & .help-wrapper {
+    align-self: flex-end;
+    width:inherit;
+
+    & .help {
+      display: flex;
+    }
+  }
+}
+
+/* fixes for demo */
+
+.greeting {
+  font-size: 56px;
+  font-weight: bold;
+}

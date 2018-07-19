@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Grid</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div class="site-wrapper">
+    <!-- <header>
+
+      <ul>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/contracts">Contracts</a></li>
+        <li><a href="/invoices">Invoices</a></li>
+      </ul>
+    </header> -->
+    <div class="body-wrapper">
+      <div class="body-wrapper--left" role="nav">
+        <div class="logo">Testing</div>
+        <div class="nav-items">
+          <div class="nav-item"><a href="/dashboard">Dashboard</a></div>
+          <div class="nav-item active"><a href="/contracts">Contracts</a></div>
+          <div class="nav-item"><a href="/invoices">Invoices</a></div>
+        </div>
+        <div class="help-wrapper">
+          <div class="help"><a href="#">Need some help?</a></div>
+        </div>
+      </div>
+      <div class="body-wrapper--main">
+        <div id="appshell" class="app-wrapper">
+          <div class="component-wrapper">
+            <h1>Welcome back, Stefan</h1>
+          </div>
+
+          <div class="component-wrapper notifications">
+
+          </div>
+
+        </div>
+        <div class="footer-wrapper">
+            <div class="footer">
+              <a href="#">Footer Information</a>
+              <a href="#">Sitemap</a>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Copyright Information</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    window.__INITIAL_STATE__ = true;
+    window.__APP_CONFIG__ = {
+      "lang": "en"
+    }
+  </script>
+
+</body>
+
+</html>

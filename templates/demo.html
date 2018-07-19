@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Demo</title>
+
+  <style>
+    *,
+    *::before,
+    *::after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div class="site-wrapper">
+    <div class="body-wrapper">
+      <div class="body-wrapper--left" role="nav">
+        <div class="logo">
+          <a>
+            <img src="/logo.svg" alt="Logo">
+          </a>
+        </div>
+        <div class="nav-items">
+          <div class="nav-item active">
+            <a href="/dashboard">Dashboard</a>
+          </div>
+          <div class="nav-item">
+            <a href="/contracts">Contracts</a>
+          </div>
+          <div class="nav-item">
+            <a href="/invoices">Invoices</a>
+          </div>
+          <div class="nav-item">
+
+            <span data-componentid="NavProfile-1" data-component="NavProfile" data-config="NavProfile-1-config"></span>
+            <script type="application/json" id="NavProfile-1-config">
+            {
+              "data": {
+                "componentId": "NavProfile-1",
+                "componentType": "single",
+                "labels": {
+                  "greetings": "Hello!"
+                }
+              }
+            }
+            </script>
+
+          </div>
+        </div>
+        <div class="help-wrapper">
+          <div class="help">
+            <a href="#">Need some help?</a>
+          </div>
+        </div>
+      </div>
+      <div class="body-wrapper--main">
+
+        <div class="component-wrapper">
+          <span data-componentid="NotificationCount-1" data-component="NotificationCount" data-config="NotificationCount-1-config"></span>
+          <script type="application/json" id="NotificationCount-1-config">
+            {
+              "data": {
+                "componentId": "NotificationCount-1",
+                "componentType": "single",
+                "labels": {
+                  "notifications": "Notifications"
+                }
+              }
+            }
+            </script>
+        </div>
+
+        <div id="appshell" class="app-wrapper">
+
+          <span data-componentid="App-1" data-component="AppA" data-config="App-1-config"></span>
+          <script type="application/json" id="App-1-config">
+            {
+              "data": {
+                "componentId": "App-1",
+                "componentType": "nested",
+                "routes": {
+                  "*": [
+                  {
+                      "component": "Heading",
+                      "configId": "Heading-1-config"
+                    },
+                    {
+                      "component": "NotificationList",
+                      "configId": "NotificationList-1-config"
+                    }
+                  ]
+                }
+              }
+            }
+          </script>
+          <script type="application/json" id="Heading-1-config">
+            {
+              "data": {
+                "componentId": "Heading-1",
+                "labels": {
+                  "heading": "Welcome back, Stefan"
+                }
+              }
+            }
+          </script>
+          <script type="application/json" id="NotificationList-1-config">
+            {
+              "data": {
+                "componentId": "NotificationList-1",
+                "labels": {
+                  "notifications": "Notifications"
+                }
+              }
+            }
+          </script>
+
+
+          <span data-componentid="App-2" data-component="AppB" data-config="App-2-config"></span>
+          <script type="application/json" id="App-2-config">
+            {
+              "data": {
+                "componentId": "App-2",
+                "componentType": "nested",
+                "routes": {
+                  "/demo/": [
+                  {
+                      "component": "ContractList",
+                      "configId": "ContractList-1-config"
+                    }],
+                    "/demo/:Id":[
+                    {
+                      "component": "ContractDetail",
+                      "configId": "ContractDetail-1-config"
+                    }
+                  ]
+                }
+              }
+            }
+          </script>
+          <script type="application/json" id="ContractList-1-config">
+            {
+              "data": {
+                "componentId": "ContractList-1",
+                "labels": {
+                }
+              }
+            }
+            </script>
+          <script type="application/json" id="ContractDetail-1-config">
+            {
+              "data": {
+                "componentId": "ContractDetail-1",
+                "componentType": "nested",
+                "routes": {
+                  "/overview": [
+                  {
+                      "component": "ContractOverview",
+                      "configId": "ContractOverview-1-config"
+                    }],
+                    "/payments":[
+                    {
+                      "component": "ContractPayments",
+                      "configId": "ContractPayments-1-config"
+                    }
+                  ]
+                }
+              }
+            }
+          </script>
+          <script type="application/json" id="ContractOverview-1-config">
+            {
+              "data": {
+                "componentId": "ContractOverview-1",
+                "labels": {
+                }
+              }
+            }
+          </script>
+          <script type="application/json" id="ContractPayments-1-config">
+            {
+              "data": {
+                "componentId": "ContractPayments-1",
+                "labels": {
+                }
+              }
+            }
+          </script>
+
+        </div>
+
+        <div class="footer-wrapper">
+          <div class="footer">
+            <a href="#">Footer Information</a>
+            <a href="#">Sitemap</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Copyright Information</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      window.__INITIAL_STATE__ = {
+        "notifications": [
+          { "label": "Notification 1: Your contract payment is pending" },
+          { "label": "Notification 2: Your contract is pending" },
+          { "label": "Notification 3: Your contract is pending" }
+        ]
+      };
+      window.__APP_CONFIG__ = {
+        "lang": "en"
+      };
+    </script>
+
+</body>
+</html>

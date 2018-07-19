@@ -1,0 +1,8 @@
+.global-error-container {
+    height: 56px;
+    padding: 20px 60px;
+    background-color: var(--red-80);
+    font-family: var(--font-baseline);
+    color: var(--white);
+    font-weight: bold;
+}

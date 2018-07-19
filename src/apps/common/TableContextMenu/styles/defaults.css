@@ -1,0 +1,23 @@
+.popup-wrapper{
+  background-color: var(--white);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08), 0 4px 6px 0 rgba(0, 0, 0, 0.08);
+  padding: 15px 30px 30px;
+  font-family: var(--font-baseline);
+  font-weight: bold;
+  line-height: 15px;
+  position: absolute;
+  min-width:250px;
+  & ul{
+    padding: 0;
+    margin:0;
+    & li{
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-cool-grey-2);
+    }
+    & li:last-child{
+      border:0;
+    }
+  }
+}

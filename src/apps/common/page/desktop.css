@@ -1,0 +1,44 @@
+@media (--desktop) {
+
+  /* Commented this part as it was affecting all header nav section */
+  /* header ul li {
+    lost-column: 1/3;
+  } */
+
+  .mobile-header {
+    display: none;
+  }
+
+  .body-wrapper {
+    display: flex;
+  }
+
+  .body-wrapper--main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .component-wrapper {
+    &.card {
+      lost-column: 1/3;
+    }
+
+    min-height: 120px;
+  }
+
+  header {
+    & .nav-items {
+      padding: 0;
+  
+      & .nav-item {
+        display: block;
+      }
+    }
+  }
+
+
+
+  .footer {
+    display: flex;
+  }
+}

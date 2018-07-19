@@ -1,0 +1,27 @@
+.modal {
+  & .shroud {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & .modal-content-wrapper {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: calc(100% - 1em);
+    z-index: 101;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}

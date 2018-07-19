@@ -1,0 +1,54 @@
+.overview-graph {
+  width: 100%;
+  margin-top: 22px;
+  margin-bottom: 26px;
+}
+
+.graphBar {
+  display: inline-block;
+  height: 52px;
+  border: 2px solid var(--white);
+}
+
+.remaining-bar {
+  &.high {
+    background-color: var(--green-vibrant);
+  }
+
+  &.mid {
+    background-color: var(--yellow-vibrant);
+  }
+
+  &.low {
+    background-color: var(--red-vibrant);
+  }
+}
+
+.intransit-bar {
+  &.high {
+    background-color: var(--green-60);
+  }
+
+  &.mid {
+    background-color: var(--yellow-60);
+  }
+
+  &.low {
+    background-color: var(--red-60);
+  }
+}
+
+.fulfilled-bar {
+  &.high {
+    background-color: var(--green-20);
+  }
+
+  &.mid {
+    background-color: var(--yellow-20);
+  }
+
+  &.low {
+    background-color: var(--red-20);
+  }
+}
+
